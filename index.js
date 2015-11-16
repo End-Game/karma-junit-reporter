@@ -53,7 +53,7 @@ var JUnitReporter = function (baseReporterDecorator, config, logger, helper, for
     if (outputFile != null) {
       var dir = useBrowserName ? path.join(outputDir, safeBrowserName)
                                : outputDir
-      newOutputFile = path.join(dir, outputFile)
+      newOutputFile = path.join(dir, safeBrowserName + '.xml')
     } else if (useBrowserName) {
       newOutputFile = path.join(outputDir, 'TESTS-' + safeBrowserName + '.xml')
     } else {
